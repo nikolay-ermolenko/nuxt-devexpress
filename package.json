@@ -2,14 +2,13 @@
   "name": "example-global-css",
   "dependencies": {
     "axios": "^0.18.0",
-    "nuxt": "^2.4.3",
-    "devextreme": "^18.2.5",
-    "devextreme-vue": "^18.2.5"
+    "nuxt": "latest",
+    "devextreme": "^18.2.3",
+    "devextreme-vue": "^18.2.3"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
+    "start": "nuxt"
   }
 }

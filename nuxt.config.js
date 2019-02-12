@@ -16,5 +16,11 @@ export default {
         return ['script', 'style', 'font'].includes(type)
       }
     }
+  },
+  modules: [
+    // '@nuxtjs/axios',
+  ],
+  axios: {
+    // proxyHeaders: false
   }
 }

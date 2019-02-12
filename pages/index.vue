@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <h2>Users</h2>
-    <!-- <ul class="users"> -->
       
       <dx-data-grid
         :data-source="users"
@@ -30,12 +29,6 @@
           @click="onButtonClick(user, 'edit')" />
       </div>
       </dx-data-grid>
-      <!-- <li v-for="user in users" :key="user.id">
-        <NuxtLink :to="'/users/'+user.id" append>
-          {{ user.name }}
-        </NuxtLink>
-      </li> -->
-    <!-- </ul> -->
   </div>
 </template>
 
@@ -56,8 +49,9 @@ export default {
       columns: ['name', 'email', 'phone', 'website', 'company.name']
     }
   },
-  async asyncData() {
+  async asyncData() {    
     const { data } = await axios.get('https://jsonplaceholder.typicode.com/users')
+   
     return { 
       users: data
     }
